@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+Sitemap: https://kk-associates-architecture.yellowvole16.chatgpt.site/sitemap.xml

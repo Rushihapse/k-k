@@ -1,0 +1,1 @@
+export default function NotFound(){return <main className="section"><p className="eyebrow">K & K Associates / 404</p><h1>A different<br/><i>direction.</i></h1><p>This page could not be found.</p><a href="/" className="button dark">Return to the studio ↗</a></main>}
