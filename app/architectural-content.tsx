@@ -3,7 +3,7 @@ import {useEffect,useLayoutEffect,useRef} from 'react';
 const targets=[
  '.ph-center>*','.ph-page-heading>*','.ph-editorial>*','.ph-case-title>*','.ph-case-hero>img','.ph-case-intro>*','.ph-case-story>*','.ph-case-image',
  '.ph-section-title','.pr-section-heading','.ph-intro>.ph-kicker','.ph-intro>div','.ph-card','.pr-feature-image','.pr-feature-aside','.pr-lens-copy','.pr-lens-image','.ph-journal-photo','.ph-feature>div','.ph-step','.ph-service',
- '.ph-toolbar','.ph-result','.inquiry-visual','.inquiry-form>*','.ph-conversation>*','.ph-footer>div'
+ '.ph-toolbar','.ph-result','.ph-conversation>*','.ph-footer>div'
 ].join(',');
 export default function ArchitecturalContent({pathname,phase}:{pathname:string|null;phase:string}){
  const phaseRef=useRef(phase);phaseRef.current=phase;
@@ -52,7 +52,7 @@ export default function ArchitecturalContent({pathname,phase}:{pathname:string|n
   release.current=flush;
   const observer=new IntersectionObserver(entries=>{let index=0;for(const entry of entries){const el=entry.target as HTMLElement;if(!entry.isIntersecting)continue;observer.unobserve(el);waiting.add(el);if(phaseRef.current==='idle')show(el,Math.min(index++*65,240))}},{threshold:.06,rootMargin:'0px 0px -3% 0px'});
   function scan(){
-   if(cancelled)return;const main=document.querySelector<HTMLElement>('main');if(!main)return;const contentRoot=main.closest('.power-site')||main;const matches=[...contentRoot.querySelectorAll<HTMLElement>(targets)].filter(el=>!el.closest('[role="dialog"],[hidden]'));
+   if(cancelled)return;const main=document.querySelector<HTMLElement>('main');if(!main)return;const contentRoot=main.closest('.power-site')||main;const matches=[...contentRoot.querySelectorAll<HTMLElement>(targets)].filter(el=>!el.closest('[role="dialog"],[hidden],.ph-contact'));
    for(const el of matches){if(items.has(el)||matches.some(parent=>parent!==el&&parent.contains(el)))continue;items.add(el);el.dataset.archContent='waiting';el.classList.add('arch-content-item');if(enabled()){el.style.opacity='0';el.style.clipPath='inset(0 0 0 0)'}observer.observe(el)}
   }
   const mutation=new MutationObserver(entries=>{if(!entries.some(entry=>[...entry.addedNodes].some(node=>node.nodeType===1)))return;if(!scanFrame)scanFrame=requestAnimationFrame(()=>{scanFrame=0;scan()})});
