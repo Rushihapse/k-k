@@ -1,1 +1,1 @@
-import Studio from './studio'; export default function Home(){return <Studio page='home'/>}
+import Studio from './power-studio'; export default function Home(){return <Studio page="home"/>}

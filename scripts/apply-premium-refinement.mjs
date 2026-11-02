@@ -1,0 +1,14 @@
+import {readFile,writeFile} from 'node:fs/promises';
+let s=await readFile('app/power-studio.tsx','utf8');
+s=s.replace("import LivingMotion from './living-motion';","import LivingMotion from './living-motion';\nimport {FeaturedArchitecture,DesignLens} from './premium-sections';");
+const a=s.indexOf('<PhotoJournal/><section className="ph-section ph-selected">'),b=s.indexOf('<section className="ph-feature">',a);
+if(a<0||b<0)throw Error('Home structure not found');
+s=s.slice(0,a)+'<FeaturedArchitecture/><DesignLens/><PhotoJournal/>'+s.slice(b);
+s=s.replace('<span>ARCHITECTURE · PLANNING · PUNE</span>','<span>AN ARCHITECTURAL PERSPECTIVE / PUNE</span>');
+s=s.replace('<p>Contemporary spaces. Lasting possibilities.</p>','<p>Spaces shaped by place.<br className="pr-mobile-only"/> Designed around life.</p>');
+s=s.replace('Explore the collection <b>↗</b>','Discover the explorations <b>↗</b>');
+s=s.replace('<span className="ph-kicker">K & K ASSOCIATES</span><div><h2>Designed for now.<br/>Considered for tomorrow.</h2>','<span className="ph-kicker">THE PRACTICE / A POINT OF VIEW</span><div><h2>Thoughtful by nature.<br/><span className="pr-soft-heading">Distinctive by design.</span></h2>');
+s=s.replace('Every possibility begins<br/>with a conversation.','A place in mind?<br/>Let’s give it perspective.');
+s=s.replace('<span className="ph-header-note">ARCHITECTURE & PLANNING</span>','<a href="/contact" className="ph-header-note pr-header-enquiry">Start a conversation <span>↗</span></a>');
+await writeFile('app/power-studio.tsx',s);
+s=await readFile('app/home-collection.tsx','utf8');s=s.replace('Places & perspectives','A closer perspective').replace('Three new architectural explorations','Light, material and the spaces between.');await writeFile('app/home-collection.tsx',s);

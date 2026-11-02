@@ -1,0 +1,12 @@
+import {readFile,writeFile} from 'node:fs/promises';
+let s=await readFile('app/architectural-transition.tsx','utf8');
+s=s.replace("import {usePathname,useRouter} from 'next/navigation';","import {usePathname,useRouter} from 'next/navigation';\nimport ArchitecturalContent from './architectural-content';");
+s=s.replace('return <><div className="arch-route-status"','return <><ArchitecturalContent pathname={pathname} phase={phase}/><div className="arch-route-status"');
+await writeFile('app/architectural-transition.tsx',s);
+s=await readFile('app/living-motion.tsx','utf8');
+s=s.replace('const animations=new Set<Animation>();let frame','let frame');
+const start=s.indexOf('  const reveal=new IntersectionObserver'),end=s.indexOf('  const updatePointer=',start);
+if(start<0||end<0)throw Error('Existing reveal controller missing');s=s.slice(0,start)+s.slice(end);
+s=s.replace('reveal.disconnect();','').replace('animations.forEach(animation=>animation.cancel());','');
+s=s.replace("localStorage.setItem('kk-motion',next?'on':'off')","localStorage.setItem('kk-motion',next?'on':'off');window.dispatchEvent(new Event('kk-motion-change'))");
+await writeFile('app/living-motion.tsx',s);

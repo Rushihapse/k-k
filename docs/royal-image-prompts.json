@@ -1,0 +1,18 @@
+{
+  "method": "Built-in ImageGen",
+  "assets": [
+    {
+      "file": "public/images/royal-bungalow.webp",
+      "prompt": "Use case: photorealistic-natural architectural visualisation. Asset: premium Indian architecture website hero image. Create a fictional luxury Rajeshahi-inspired bungalow in warm ivory limestone and white marble with restrained antique-gold and aged brass detailing. Elegant symmetrical two-storey residence, tall graceful semicircular arched veranda, carved slim columns, deep terrace cornices and elegant balustrades, small understated chhatri roof pavilion, fine bronze window frames, lush landscaped forecourt with stone path and reflecting pool. Contemporary comfort with refined Indian royal heritage influences, not a gaudy palace. Entire building visible three-quarter eye-level architectural view, medium-wide landscape composition. Soft morning sunlight, ivory-white warm sky, realistic stone texture, convincing shadows, subtle golden interior lights. Photography-grade architectural rendering, exquisitely composed, premium editorial style, muted cream and champagne palette. No text, logos, watermarks, people or artificial oversaturation. Fictional design concept, not an existing building."
+    },
+    {
+      "file": "public/images/royal-courtyard.webp",
+      "prompt": "Use case: photorealistic-natural architectural visualisation. Asset: luxury architecture portfolio concept image. Fictional premium Indian courtyard bungalow, exquisite cream-white limestone and warm white plaster, low two-storey L-shaped architecture framing a courtyard, finely detailed tall arches, a low sloping terracotta roof over one wing, slim aged-brass frames, timber ceilings and verandas, fine gold balcony railings and lush garden beds, large mature tree, shallow reflecting pool, soft ivory sunlit environment. Tasteful Rajeshahi-inspired details reinterpreted as contemporary luxury, no domes on this design, realistic buildable proportions. Wide architectural editorial photograph, three-quarter courtyard viewpoint, whole building legible, natural early morning light, rich tactile textures, photorealistic luxury real-estate visualization with refined cream and antique gold palette. No typography, watermarks, logos or people. Clearly fictional conceptual architecture."
+    },
+    {
+      "file": "public/images/royal-building.webp",
+      "prompt": "Use case: photorealistic-natural architectural visualisation. Asset: premium Indian architecture portfolio concept image. A fictional elegant six-storey residential building in warm white limestone and ivory plaster with antique gold bronze balcony railings, graceful tall arches on the ground floor entrance colonnade and refined arched window heads on selected upper floors, layered cornices, deep planted balconies, recessed upper two floors with a roof terrace and timber pergola, mature trees and beautiful landscaped entrance, symmetrical and buildable proportions. Contemporary Indian luxury residential architecture with restrained Rajeshahi influence, not an historic palace. Three-quarter wide view showing the entire building and its landscaped setting, natural golden morning light, ivory warm-white sky, calm cream and muted brass palette, rich realistic stone textures and glass reflections, premium magazine-quality photographic architectural rendering. No typography, logos, watermarks or dominant people. Fictional concept architecture, not an existing building."
+    }
+  ],
+  "note": "Fictional AI architectural concepts. Original PNGs are preserved alongside optimised WebP assets. Interactive procedural models are separate architectural studies."
+}

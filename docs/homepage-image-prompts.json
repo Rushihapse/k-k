@@ -1,0 +1,20 @@
+{
+  "method": "Built-in image generation",
+  "images": [
+    {
+      "name": "garden-villa",
+      "prompt": "Photorealistic editorial architectural photograph of a refined contemporary Indian garden villa in Pune, two storeys, warm pale stone and teak screens, deep shaded verandas, a rain-fed lush tropical courtyard and mature trees. Restrained premium architecture, believable construction details, warm late-afternoon daylight, eye-level architectural camera with straight verticals, wide landscape framing, no text, no watermark, no logo. A fictional architectural concept image for a design portfolio, not a photograph of an existing commissioned building.",
+      "file": "public/images/garden-villa.webp"
+    },
+    {
+      "name": "urban-residence",
+      "prompt": "Photorealistic architectural editorial photograph of a contemporary mid-rise apartment building in an Indian city, six storeys, refined pale concrete, terracotta vertical screens and deep planted balconies, beautifully resolved street-level entrance with a few small figures for scale. Premium but realistic, soft overcast light, meticulous architectural detail, straight verticals, portrait composition. No text, watermark or logo. Fictional architectural concept for an architecture portfolio.",
+      "file": "public/images/urban-residence.webp"
+    },
+    {
+      "name": "landscape-pavilion",
+      "prompt": "Photorealistic editorial architecture photograph of a serene contemporary cultural pavilion in western India, long low roof, warm rammed-earth walls, thin concrete roof edge, reflecting water and grasses, covered walkway framing a distant garden. Beautifully resolved proportions, subtle material texture, diffused morning light, wide composition, straight verticals. No text watermark logo. Fictional architectural concept for portfolio imagery.",
+      "file": "public/images/landscape-pavilion.webp"
+    }
+  ]
+}
