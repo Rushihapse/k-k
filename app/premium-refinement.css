@@ -11,4 +11,4 @@
 .power-site .pr-lens{padding-inline:max(var(--pr-gutter),calc((100vw - 1440px)/2 + var(--pr-gutter)))}.ph-feature{max-width:calc(1440px - var(--pr-gutter)*2)}
 .ph-motion-toggle{bottom:22px;left:var(--pr-gutter)}.ph-universe-bottom>span:first-child{display:none}.ph-universe-bottom{justify-content:flex-end}.ph-universe-bottom .ph-scroll-note{margin-right:auto;margin-left:43%}@media(max-width:650px){.ph-motion-toggle{bottom:18px;left:18px}.ph-universe-bottom .ph-scroll-note{display:none}}
 
-.ph-footer .ph-footer-credit{margin-top:18px;font-size:10px;line-height:1.7;letter-spacing:.02em}.ph-footer-credit strong{font-weight:500;color:var(--ink)}
+.ph-footer .ph-footer-credit{margin-top:18px;font-size:10px;line-height:1.7;letter-spacing:.02em}.ph-footer-credit strong{font-weight:500;color:inherit}
