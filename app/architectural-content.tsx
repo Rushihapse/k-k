@@ -47,7 +47,8 @@ export default function ArchitecturalContent({pathname,phase}:{pathname:string|n
    }
   }
 
-  function flush(){if(phaseRef.current!=='idle')return;let index=0;for(const el of waiting){if(el.getBoundingClientRect().top<innerHeight&&el.getBoundingClientRect().bottom>0)show(el,Math.min(index++*70,280))}}
+  function flush(){if(phaseRef.current!=='idle')return;let index=0;for(const el of items){const rect=el.getBoundingClientRect();if(el.dataset.archContent==='waiting'&&rect.height>0&&rect.top<innerHeight&&rect.bottom>0){observer.unobserve(el);show(el,Math.min(index++*70,280))}}}
+  const onViewport=()=>{if(!scanFrame)scanFrame=requestAnimationFrame(()=>{scanFrame=0;flush()})};
   release.current=flush;
   const observer=new IntersectionObserver(entries=>{let index=0;for(const entry of entries){const el=entry.target as HTMLElement;if(!entry.isIntersecting)continue;observer.unobserve(el);waiting.add(el);if(phaseRef.current==='idle')show(el,Math.min(index++*65,240))}},{threshold:.06,rootMargin:'0px 0px -3% 0px'});
   function scan(){
@@ -57,8 +58,8 @@ export default function ArchitecturalContent({pathname,phase}:{pathname:string|n
   const mutation=new MutationObserver(entries=>{if(!entries.some(entry=>[...entry.addedNodes].some(node=>node.nodeType===1)))return;if(!scanFrame)scanFrame=requestAnimationFrame(()=>{scanFrame=0;scan()})});
   function revealAll(){if(enabled())return;animations.forEach(animation=>animation.cancel());animations.clear();items.forEach(el=>{el.dataset.archContent='shown';el.style.removeProperty('opacity');el.style.removeProperty('clip-path');el.classList.remove('arch-content-drawing')});observer.disconnect();waiting.clear()}
   const focus=(event:FocusEvent)=>{const el=(event.target as Element)?.closest<HTMLElement>('.arch-content-item');if(el&&items.has(el))show(el)};
-  scan();mutation.observe(pageRoot,{childList:true,subtree:true});pageRoot.addEventListener('focusin',focus);reduced.addEventListener('change',revealAll);window.addEventListener('kk-motion-change',revealAll);
-  return()=>{cancelled=true;cancelAnimationFrame(scanFrame);observer.disconnect();mutation.disconnect();animations.forEach(animation=>animation.cancel());pageRoot.removeEventListener('focusin',focus);reduced.removeEventListener('change',revealAll);window.removeEventListener('kk-motion-change',revealAll);items.forEach(el=>{el.style.removeProperty('opacity');el.style.removeProperty('clip-path');el.classList.remove('arch-content-item','arch-content-drawing');delete el.dataset.archContent});release.current=()=>{}};
+  scan();window.addEventListener('scroll',onViewport,{passive:true});window.addEventListener('resize',onViewport);mutation.observe(pageRoot,{childList:true,subtree:true});pageRoot.addEventListener('focusin',focus);reduced.addEventListener('change',revealAll);window.addEventListener('kk-motion-change',revealAll);
+  return()=>{cancelled=true;window.removeEventListener('scroll',onViewport);window.removeEventListener('resize',onViewport);cancelAnimationFrame(scanFrame);observer.disconnect();mutation.disconnect();animations.forEach(animation=>animation.cancel());pageRoot.removeEventListener('focusin',focus);reduced.removeEventListener('change',revealAll);window.removeEventListener('kk-motion-change',revealAll);items.forEach(el=>{el.style.removeProperty('opacity');el.style.removeProperty('clip-path');el.classList.remove('arch-content-item','arch-content-drawing');delete el.dataset.archContent});release.current=()=>{}};
  },[pathname]);
  return null;
 }
