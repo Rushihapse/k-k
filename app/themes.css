@@ -1,0 +1,42 @@
+:root{color-scheme:light;--theme-bg:#f6f5f1;--theme-fg:#20333d;--theme-border:#cbd3d2}
+html[data-theme=dark]{color-scheme:dark;--theme-bg:#121c22;--theme-fg:#e7edeb;--theme-border:#38484f;--pr-paper:#121c22;--pr-ink:#e7edeb;--pr-muted:#a3b3b7;--pr-line:#38484f;--pr-accent:#a5c7d3;--paper:#121c22;--ink:#e7edeb;--muted:#a3b3b7}
+body{background:var(--theme-bg);color:var(--theme-fg)}
+.kk-theme-toggle{position:fixed;bottom:22px;right:clamp(18px,3vw,42px);z-index:105;display:flex;gap:9px;align-items:center;padding:12px 15px;border:1px solid var(--theme-border);background:var(--theme-bg);color:var(--theme-fg);font:12px Arial,sans-serif;box-shadow:0 3px 18px #0000000b;cursor:pointer;border-radius:2px}
+.kk-theme-toggle:hover{border-color:currentColor}.kk-theme-toggle:focus-visible{outline:2px solid #7fabbf;outline-offset:4px}
+html[data-theme=dark] .power-site{background:#121c22;color:#e7edeb}
+html[data-theme=dark] .power-site :is(.ph-header,.ph-scrolled,.ph-nav,.ph-menu){background:#152129f5!important;color:#e7edeb;border-color:#35454c}
+html[data-theme=dark] .power-site .ph-nav a{color:#d8e3e5;border-color:#35454c}
+html[data-theme=dark] .power-site .ph-nav a:is(:hover,[aria-current=page]){background:#2c414a}
+html[data-theme=dark] .power-site :is(h1,h2,h3){color:#e7edeb}
+html[data-theme=dark] .power-site :is(.minimal-eyebrow,.minimal-home-heading>p,.minimal-home-bottom p,.authority-intro,.ph-disclosure,.sample-note,.blog-introduction,.article-intro,.article-body p,.blog-card p,.about-layout p,.about-values p,.ph-two-copy p,.ph-step p,.ph-case-story p,.ph-case-intro p){color:#afbec1}
+html[data-theme=dark] .power-site :is(.kk-card-wordmark>strong){color:#f0b1ae}
+html[data-theme=dark] .power-site :is(.kk-card-wordmark>span){color:#c2d0d2}
+html[data-theme=dark] .power-site :is(.ph-toolbar,.ph-filters,.ph-search,.ph-service,.ph-case-meta,.ph-step,.about-values article,.ph-footer){border-color:#38484f}
+html[data-theme=dark] .power-site :is(.ph-filters button,.ph-search input,.ph-case-meta button){color:#d8e3e5;background:transparent;border-color:#38484f}
+html[data-theme=dark] .power-site .authority-panel{background-color:#1b2a31;background-image:repeating-linear-gradient(0deg,#d4e3df04 0px,#d4e3df04 1px,transparent 1px,transparent 4px),linear-gradient(110deg,#b4ceca06,transparent);border-color:#38484f}
+html[data-theme=dark] .power-site .authority-tabs>button{background:#22343c;border-color:#485b63;color:#dce8e8}
+html[data-theme=dark] .power-site .authority-tabs>button[aria-pressed=true]{background:#b6d1d6;color:#14252c;border-color:#b6d1d6}
+html[data-theme=dark] .power-site :is(.authority-label>span,.authority-controls>p,.authority-empty p,.authority-label em,.blog-card>span){color:#a9c0c3}
+html[data-theme=dark] .power-site .authority-empty{background:#1b2a31;border-color:#38484f}
+html[data-theme=dark] .power-site .ph-footer{background:#0b151b}
+html[data-theme=dark] .power-site .ph-footer p{color:#aebfc4}
+html[data-theme=dark] .power-site .ph-footer .kk-card-brand{background:transparent}
+html[data-theme=dark] .power-site :is(.ph-universe,.pr-feature,.pr-lens,.pr-feature-aside,.pr-lens-copy){background:#121c22;color:#e7edeb}
+html[data-theme=dark] .power-site .ph-center{background:radial-gradient(ellipse at center,#121c22 45%,#121c22ee 65%,#121c2200 76%)}
+html[data-theme=dark] .power-site .ph-center :is(p,em,span){color:#b1c8c6}
+html[data-theme=dark] .power-site :is(.ph-universe-bottom>*,.ph-zoom-controls .ph-zoom-hint,.ph-zoom-controls>div,.ph-zoom-controls button,.ph-motion-toggle){background:#182930ed!important;color:#cfdddf!important;border-color:#485b63!important}
+html[data-theme=dark] .power-site :is(.pr-feature-copy p,.pr-lens-panel p,.pr-feature-meta,.pr-overline,.pr-section-heading>span,.pr-feature-count){color:#afc2c6}
+html[data-theme=dark] .power-site :is(.pr-feature-selector button,.pr-lens-tabs button,.pr-feature-selectors button){color:#cfdddf;border-color:#38484f}
+html[data-theme=dark] .power-site :is(.inquiry-form,.inquiry-experience){background:#16232b;color:#e7edeb}
+html[data-theme=dark] .power-site .inquiry-form :is(p,label,.field,.tiny,.section-number,.wizard-heading,.wizard-progress,.brief-summary){color:#bacace}
+html[data-theme=dark] .power-site .inquiry-form :is(input,select,textarea){background:transparent;color:#e7edeb;border-color:#576b74}
+html[data-theme=dark] .power-site .inquiry-form :is(input,textarea)::placeholder{color:#8da2aa}
+html[data-theme=dark] .power-site .inquiry-form option{background:#16232b;color:#e7edeb}
+html[data-theme=dark] .power-site :is(.inquiry-privacy,.wizard-progress,.status,.brief-summary){border-color:#485b63}
+html[data-theme=dark] .power-site :is(.ph-conversation>a,.ph-link,.pr-link,.simple-link,.minimal-home-bottom a,.ph-card>p,.ph-result,.ph-section-title>a,.ph-toolbar button){color:#d1e2e4}
+html[data-theme=dark] .power-site .ph-card>div{background:#24353d}
+html[data-theme=dark] .power-site .ph-center>a{color:#d1e2e4;border-color:#81999e}
+html[data-theme=dark] .power-site .ph-case-title h1{color:white}
+@media(max-width:650px){.kk-theme-toggle{bottom:18px;right:16px;padding:10px 12px;font-size:11px}}
+
+html[data-theme=dark] .power-site .ph-brand{background:transparent!important}html[data-theme=dark] .power-site .inquiry-visual :is(span,p,h2){color:#f3f7f4}html[data-theme=dark] .power-site .wizard-progress>div.active{color:#d0e2df}html[data-theme=dark] .power-site .wizard-progress strong{color:inherit}html[data-theme=dark] .power-site .inquiry-form h1 i{color:#bfd0b2}
