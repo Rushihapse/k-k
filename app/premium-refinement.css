@@ -12,3 +12,16 @@
 .ph-motion-toggle{bottom:22px;left:var(--pr-gutter)}.ph-universe-bottom>span:first-child{display:none}.ph-universe-bottom{justify-content:flex-end}.ph-universe-bottom .ph-scroll-note{margin-right:auto;margin-left:43%}@media(max-width:650px){.ph-motion-toggle{bottom:18px;left:18px}.ph-universe-bottom .ph-scroll-note{display:none}}
 
 .ph-footer .ph-footer-credit{margin-top:18px;font-size:10px;line-height:1.7;letter-spacing:.02em}.ph-footer-credit strong{font-weight:500;color:inherit}
+
+/* Business-card identity: coloured skyline, red underlined name and full descriptor. */
+.power-site .kk-card-brand{display:flex;align-items:center;gap:10px;line-height:1.2;text-align:left;letter-spacing:normal;font-family:Arial,Helvetica,sans-serif}
+.power-site .kk-card-brand>img{display:block;width:44px;height:43px;object-fit:contain;flex:none}
+.power-site .kk-card-wordmark{display:flex;flex-direction:column;gap:5px;margin:0;font:inherit;letter-spacing:normal}
+.power-site .kk-card-wordmark>strong{display:block;color:#a82429;border-bottom:1px solid currentColor;padding-bottom:4px;font-size:16px;font-weight:700;letter-spacing:.025em;white-space:nowrap}
+.power-site .kk-card-wordmark>span{display:block;margin:0;color:#3c413e;font-size:9px;font-weight:400;letter-spacing:.005em;white-space:nowrap}
+.power-site .ph-brand{width:auto;letter-spacing:normal}
+.power-site .ph-footer-brand{display:inline-block}
+.power-site .ph-footer .kk-card-brand{background:#fff;padding:15px 18px;max-width:100%;width:max-content}
+.power-site .ph-footer .kk-card-brand>img{width:48px;height:48px}
+@media(max-width:1050px){.power-site .ph-header .kk-card-brand>img{width:32px;height:36px}.power-site .ph-header .kk-card-wordmark>strong{font-size:13px}.power-site .ph-header .kk-card-wordmark>span{font-size:7px}.power-site .ph-header .kk-card-brand{gap:7px}}
+@media(max-width:650px){.power-site .ph-header .kk-card-wordmark>strong{font-size:12px}.power-site .ph-header .kk-card-wordmark>span{font-size:6.8px}.power-site .ph-header .kk-card-brand>img{width:29px;height:34px}.power-site .ph-footer .kk-card-wordmark>strong{font-size:13px}.power-site .ph-footer .kk-card-wordmark>span{font-size:7.5px}}

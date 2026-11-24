@@ -1,0 +1,1 @@
+export default function Brand(){return <span className="kk-card-brand"><img src="/images/kk-building-mark.svg" alt="" width="326" height="270"/><span className="kk-card-wordmark"><strong>K &amp; K ASSOCIATES</strong><span>Architectural Planners &amp; Designers</span></span></span>}
