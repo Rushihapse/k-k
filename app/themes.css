@@ -40,3 +40,5 @@ html[data-theme=dark] .power-site .ph-case-title h1{color:white}
 @media(max-width:650px){.kk-theme-toggle{bottom:18px;right:16px;padding:10px 12px;font-size:11px}}
 
 html[data-theme=dark] .power-site .ph-brand{background:transparent!important}html[data-theme=dark] .power-site .inquiry-visual :is(span,p,h2){color:#f3f7f4}html[data-theme=dark] .power-site .wizard-progress>div.active{color:#d0e2df}html[data-theme=dark] .power-site .wizard-progress strong{color:inherit}html[data-theme=dark] .power-site .inquiry-form h1 i{color:#bfd0b2}
+
+html[data-theme=dark] .home-sections{--home-line:#38484f;--home-soft:#1c2d34;--home-muted:#adbec1}html[data-theme=dark] .home-sections h2 em{color:#b3c6ac}html[data-theme=dark] .home-project-photo>span{background:#152830e8;color:#d7e4e5}html[data-theme=dark] .home-invitation>a{background:#b6d1d6;color:#13272e}html[data-theme=dark] .home-authority-links>a{border-color:#566e76}
